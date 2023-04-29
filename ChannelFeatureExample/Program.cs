@@ -6,7 +6,6 @@ using System.Threading.Channels;
 
 //Console.WriteLine("Welcome to Custom Channel Example!");
 var channel = CreateChannel<string>();
-var anotherChannel = CreateChannel<int>();
 var message = string.Empty;
 
 
@@ -28,5 +27,5 @@ Console.WriteLine("End Of the Process");
 
 Channel<T> CreateChannel<T>()
 {
-    return Channel.CreateUnbounded<T>(new UnboundedChannelOptions { });
+    return Channel.CreateUnbounded<T>();
 }
